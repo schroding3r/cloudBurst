@@ -6,6 +6,7 @@ PORT = 6667
 NICK = 'CloudBurst'
 TRIGGER = '!'
 ENCODING = 'utf-8' #Python3 modification, converts the strings to bytearrays before sending
+INITCHAN = '#werecat'
 
 irc = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 irc.connect((NETWORK,PORT))
@@ -39,7 +40,7 @@ def think(line):
                 print ('[*]command received: '+message+'')
                 if message=='!join':
                         print ('[*]attempting to join')
-                        irc.send(('JOIN #werecat\r\n').encode(ENCODING))
+                        irc.send(('JOIN '+INITCHAN+'\r\n').encode(ENCODING))
                 if message=='!die':
                         print ('[*]shutting down...')
                         exit()
