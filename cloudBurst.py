@@ -1,20 +1,37 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 import socket
-OWNER = 'Schr0'
-NETWORK = 'irc.freenode.net'
-PORT = 6667
+import sys
+import os
+
+OWNER = 'Schro'
+NETWORK = '67.58.179.252'
+PORT = 56667
 NICK = 'CloudBurst'
 TRIGGER = '!'
 ENCODING = 'utf-8' #Python3 modification, converts the strings to bytearrays before sending
-INITCHAN = '#werecat'
+INITCHAN = '#cyberia'
+
+plugdir=sys.path[0]+'\\cloudBurstPlugins\\'
+plugins=os.listdir(plugdir)
 
 irc = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 irc.connect((NETWORK,PORT))
 irc.send (('NICK {0}\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('USER {0} O O O\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('PRIVMSG NickServ :identify schr0bot\r\n').encode(ENCODING))
+def command(arg):
+        if arg=='!join':
+                print ('[*]attempting to join')
+                irc.send(('JOIN '+INITCHAN+'\r\n').encode(ENCODING))
+        if arg=='!die':
+                print ('[*]shutting down...')
+                exit()
+        if arg=='!availPlug':
+                print ('[*]Listing Plugins')
+                print ('[*]Loaded Plugins:',end=' ')
+                print (plugins)
 
-def prethink(line): #produce useful fields
+def think(line): #produce useful fields
         senderhostmask=line[0].split('!',1)
         sender=senderhostmask[0]        
         sender=sender[1:]
@@ -32,18 +49,9 @@ def prethink(line): #produce useful fields
         message=message[1:]
         sendername=''.join(_senderhost[0])
         message=message.rstrip()
-        return sender,sendername,senderhost,sentto,message
-        
-def think(line):
-        sender,sendername,senderhost,sentto,message=prethink(line)
         if message.startswith(TRIGGER):
                 print ('[*]command received: '+message+'')
-                if message=='!join':
-                        print ('[*]attempting to join')
-                        irc.send(('JOIN '+INITCHAN+'\r\n').encode(ENCODING))
-                if message=='!die':
-                        print ('[*]shutting down...')
-                        exit()
+                command(message)
 
 while 1:
         try:
@@ -65,7 +73,7 @@ while 1:
         except IndexError as msg:
                 print ('[X]Short Message- Error: '+msg)
         except UnicodeDecodeError as msg:
-                print('[X]Unicode Error: '+msg)
+                print ('[X]Unicode Error: '+msg)
                 
 irc.close()
 
