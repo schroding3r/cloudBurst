@@ -18,7 +18,12 @@ irc.connect((NETWORK,PORT))
 irc.send (('NICK {0}\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('USER {0} O O O\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('PRIVMSG NickServ :identify schr0bot\r\n').encode(ENCODING))
-def command(arg):
+irc.send (('JOIN {0}\r\n'.format(INITCHAN)).encode(ENCODING))
+
+def esend(message,chan):
+        irc.send(('PRIVMSG '+chan+" :"+message+"\r\n").encode(ENCODING))
+        
+def command(sender,sendername,senderhost,sentto,arg):
         plugdir=sys.path[0]+'\\cloudBurstPlugins\\'
         plugins=os.listdir(plugdir)
         if arg == 'die':
@@ -28,6 +33,8 @@ def command(arg):
                 print('Command Run:',end=' ')
                 print(arg)
                 exec(compile(open(execstage).read(),execstage,'exec'))
+        else:
+                esend("invalid command",sentto)
 
 def think(line): #produce useful fields
         senderhostmask=line[0].split('!',1)
@@ -50,7 +57,7 @@ def think(line): #produce useful fields
         if message.startswith(TRIGGER):
                 message=message[:0]+message[1:] #removes trigger
                 print ('[*]command received: '+message+'')
-                command(message)
+                command(sender,sendername,senderhost,sentto,message)
 
 while 1:
         try:
