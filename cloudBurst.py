@@ -11,8 +11,7 @@ TRIGGER = '!'
 ENCODING = 'utf-8' #Python3 modification, converts the strings to bytearrays before sending
 INITCHAN = '#cyberia'
 
-plugdir=sys.path[0]+'\\cloudBurstPlugins\\'
-plugins=os.listdir(plugdir)
+
 
 irc = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 irc.connect((NETWORK,PORT))
@@ -20,16 +19,15 @@ irc.send (('NICK {0}\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('USER {0} O O O\r\n'.format(NICK)).encode(ENCODING))
 irc.send (('PRIVMSG NickServ :identify schr0bot\r\n').encode(ENCODING))
 def command(arg):
-        if arg=='!join':
-                print ('[*]attempting to join')
-                irc.send(('JOIN '+INITCHAN+'\r\n').encode(ENCODING))
-        if arg=='!die':
-                print ('[*]shutting down...')
+        plugdir=sys.path[0]+'\\cloudBurstPlugins\\'
+        plugins=os.listdir(plugdir)
+        if arg == 'die':
                 exit()
-        if arg=='!availPlug':
-                print ('[*]Listing Plugins')
-                print ('[*]Loaded Plugins:',end=' ')
-                print (plugins)
+        if arg in plugins:
+                execstage=plugdir+arg
+                print('Command Run:',end=' ')
+                print(arg)
+                exec(execstage)
 
 def think(line): #produce useful fields
         senderhostmask=line[0].split('!',1)
@@ -50,6 +48,7 @@ def think(line): #produce useful fields
         sendername=''.join(_senderhost[0])
         message=message.rstrip()
         if message.startswith(TRIGGER):
+                message=message[:0]+message[1:] #removes trigger
                 print ('[*]command received: '+message+'')
                 command(message)
 
