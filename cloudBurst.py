@@ -27,7 +27,7 @@ def command(arg):
                 execstage=plugdir+arg
                 print('Command Run:',end=' ')
                 print(arg)
-                exec(execstage)
+                exec(compile(open(execstage).read(),execstage,'exec'))
 
 def think(line): #produce useful fields
         senderhostmask=line[0].split('!',1)
