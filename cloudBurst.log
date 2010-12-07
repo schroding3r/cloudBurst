@@ -1,0 +1,32 @@
+:Schrodinger.dontexist.org NOTICE AUTH :*** Looking up your hostname...
+:Schrodinger.dontexist.org NOTICE AUTH :*** Couldn't resolve your hostname; using your IP address instead
+:Schrodinger.dontexist.org 001 CloudBurst :Welcome to the SchrodingerOnApogee IRC Network CloudBurst!CloudBurst@74.43.50.62
+:Schrodinger.dontexist.org 002 CloudBurst :Your host is Schrodinger.dontexist.org, running version Unreal3.2.8.1
+:Schrodinger.dontexist.org 003 CloudBurst :This server was created Fri Jun 12 2009 at 18:21:22 EDT
+:Schrodinger.dontexist.org 004 CloudBurst Schrodinger.dontexist.org Unreal3.2.8.1 iowghraAsORTVSxNCWqBzvdHtGp lvhopsmntikrRcaqOALQbSeIKVfMCuzNTGj
+:Schrodinger.dontexist.org 005 CloudBurst UHNAMES NAMESX SAFELIST HCN MAXCHANNELS=10 CHANLIMIT=#:10 MAXLIST=b:60,e:60,I:60 NICKLEN=30 CHANNELLEN=32 TOPICLEN=307 KICKLEN=307 AWAYLEN=307 MAXTARGETS=20 :are supported by this server
+:Schrodinger.dontexist.org 005 CloudBurst WALLCHOPS WATCH=128 WATCHOPTS=A SILENCE=15 MODES=12 CHANTYPES=# PREFIX=(qaohv)~&@%+ CHANMODES=beI,kfL,lj,psmntirRcOAQKVCuzNSMTG NETWORK=SchrodingerOnApogee CASEMAPPING=ascii EXTBAN=~,cqnr ELIST=MNUCT STATUSMSG=~&@%+ :are supported by this server
+:Schrodinger.dontexist.org 005 CloudBurst EXCEPTS INVEX CMDS=KNOCK,MAP,DCCALLOW,USERIP :are supported by this server
+:Schrodinger.dontexist.org 251 CloudBurst :There are 7 users and 3 invisible on 2 servers
+:Schrodinger.dontexist.org 252 CloudBurst 8 :operator(s) online
+:Schrodinger.dontexist.org 254 CloudBurst 1 :channels formed
+:Schrodinger.dontexist.org 255 CloudBurst :I have 2 clients and 1 servers
+:Schrodinger.dontexist.org 265 CloudBurst :Current Local Users: 2  Max: 4
+:Schrodinger.dontexist.org 266 CloudBurst :Current Global Users: 10  Max: 10
+:Schrodinger.dontexist.org 375 CloudBurst :- Schrodinger.dontexist.org Message of the Day - 
+:Schrodinger.dontexist.org 372 CloudBurst :- 2/7/2010 2:41
+:Schrodinger.dontexist.org 372 CloudBurst :- lolmotd
+:Schrodinger.dontexist.org 376 CloudBurst :End of /MOTD command.
+:CloudBurst MODE CloudBurst :+iwx
+:CloudBurst!CloudBurst@5E9D3376.D3691041.A3B012B5.IP JOIN :#cyberia
+:Schrodinger.dontexist.org 332 CloudBurst #cyberia :"I've always wondered if there was a Hezbollah version of minesweeper where you get points for blowing up on your first move."    — James Lileks.
+:Schrodinger.dontexist.org 333 CloudBurst #cyberia ChanServ 1290705076
+:Schrodinger.dontexist.org 353 CloudBurst = #cyberia :CloudBurst Schro 
+:Schrodinger.dontexist.org 366 CloudBurst #cyberia :End of /NAMES list.
+:NickServ!services@localhost.net NOTICE CloudBurst :This nickname is registered and protected.  If it is your
+:NickServ!services@localhost.net NOTICE CloudBurst :nick, type /msg NickServ IDENTIFY password.  Otherwise,
+:NickServ!services@localhost.net NOTICE CloudBurst :please choose a different nick.
+:NickServ!services@localhost.net NOTICE CloudBurst :Password accepted - you are now recognized.
+:ChanServ!services@localhost.net MODE #cyberia +o CloudBurst
+:Schro!Schro@5E9D3376.D3691041.A3B012B5.IP PRIVMSG #cyberia :!die
+[*]command received: die

@@ -10,9 +10,10 @@ NICK = 'CloudBurst'
 TRIGGER = '!'
 ENCODING = 'utf-8' #Python3 modification, converts the strings to bytearrays before sending
 INITCHAN = '#cyberia'
+LOGFILE = 'cloudBurst.log'
 
 
-
+log=open(LOGFILE,'a')
 irc = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
 irc.connect((NETWORK,PORT))
 irc.send (('NICK {0}\r\n'.format(NICK)).encode(ENCODING))
@@ -30,8 +31,8 @@ def command(sender,sendername,senderhost,sentto,arg):
                 exit()
         if arg in plugins:
                 execstage=plugdir+arg
-                print('Command Run:',end=' ')
-                print(arg)
+                log.write('Command Run:',end=' ')
+                log.write(arg)
                 exec(compile(open(execstage).read(),execstage,'exec'))
         else:
                 esend("invalid command",sentto)
@@ -56,15 +57,15 @@ def think(line): #produce useful fields
         message=message.rstrip()
         if message.startswith(TRIGGER):
                 message=message[:0]+message[1:] #removes trigger
-                print ('[*]command received: '+message+'')
+                log.write('[*]command received: '+message+'')
                 command(sender,sendername,senderhost,sentto,message)
 
 while 1:
         try:
-                line=((irc.recv(4096)).decode(ENCODING)) #recieve server messages
-                print (line) 
+                line=((irc.recv(4096)).decode(ENCODING)) #recieve server messages 
                 checkline=line.split(' ')
                 if checkline[0]!='PING': #Call a parsing function
+                        log.write(line)
                         procline=line.split(' ',3)
                         think(procline)
                 if(checkline[0]=='PING'): #If server pings then pong
@@ -75,11 +76,11 @@ while 1:
         except socket.error as msg:
                 if line:
                         line.close()
-                print ('[X]Socket Error: '+msg)
+                log.write('[X]Socket Error: '+msg)
         except IndexError as msg:
-                print ('[X]Short Message- Error: '+msg)
+                log.write('[X]Short Message- Error: '+msg)
         except UnicodeDecodeError as msg:
-                print ('[X]Unicode Error: '+msg)
+                log.write('[X]Unicode Error: '+msg)
                 
 irc.close()
 
