@@ -1,0 +1,2 @@
+esend('sender: {0} sendername: {1} senderhost: {2} sentto: {3}arg:{4}'.format(sender,sendername,senderhost,sentto,arg),'#cyberia')
+
