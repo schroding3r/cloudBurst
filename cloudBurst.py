@@ -25,7 +25,7 @@ def esend(message,chan):
         irc.send(('PRIVMSG '+chan+" :"+message+"\r\n").encode(ENCODING))
         
 def command(sender,sendername,senderhost,sentto,arg):
-        plugdir=sys.path[0]+'\\cloudBurstPlugins\\'
+        plugdir=sys.path[0]+'/cloudBurstPlugins/'
         plugins=os.listdir(plugdir)
         if arg == 'die':
                 exit()

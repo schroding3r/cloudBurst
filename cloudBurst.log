@@ -1,0 +1,74 @@
+:pratchett.freenode.net NOTICE * :*** Looking up your hostname...
+:pratchett.freenode.net NOTICE * :*** Checking Ident
+:pratchett.freenode.net NOTICE * :*** Found your hostname
+:pratchett.freenode.net NOTICE * :*** No Ident response
+:pratchett.freenode.net 433 * Schr0bot :Nickname is already in use.
+:pratchett.freenode.net 451 * :You have not registered
+:pratchett.freenode.net NOTICE * :*** Looking up your hostname...
+:pratchett.freenode.net NOTICE * :*** Checking Ident
+:pratchett.freenode.net NOTICE * :*** Found your hostname
+:pratchett.freenode.net NOTICE * :*** No Ident response
+:pratchett.freenode.net 001 Schr0bot :Welcome to the freenode Internet Relay Chat Network Schr0bot
+:pratchett.freenode.net 002 Schr0bot :Your host is pratchett.freenode.net[192.168.25.107/6667], running version ircd-seven-1.1.3
+:pratchett.freenode.net 003 Schr0bot :This server was created Sun Dec 4 2011 at 06:24:07 PST
+:pratchett.freenode.net 004 Schr0bot pratchett.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQbcefgijklmnopqrstvz bkloveqjfI
+:pratchett.freenode.net 005 Schr0bot CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQcgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+:pratchett.freenode.net 005 Schr0bot CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+:pratchett.freenode.net 005 Schr0bot EXTBAN=$,arx WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+:pratchett.freenode.net 251 Schr0bot :There are 199 users and 73454 invisible on 32 servers
+:pratchett.freenode.net 252 Schr0bot 34 :IRC Operators online
+:pratchett.freenode.net 253 Schr0bot 5 :unknown connection(s)
+:pratchett.freenode.net 254 Schr0bot 41330 :channels formed
+:pratchett.freenode.net 255 Schr0bot :I have 2581 clients and 1 servers
+:pratchett.freenode.net 265 Schr0bot 2581 8594 :Current local users 2581, max 8594
+:pratchett.freenode.net 266 Schr0bot 73653 87208 :Current global users 73653, max 87208
+:pratchett.freenode.net 250 Schr0bot :Highest connection count: 8595 (8594 clients) (4516625 connections received)
+:pratchett.freenode.net 375 Schr0bot :- pratchett.freenode.net Message of the Day - 
+:pratchett.freenode.net 372 Schr0bot :- Welcome to pratchett.freenode.net in Rennes, FR, EU.
+:pratchett.freenode.net 372 Schr0bot :- Thanks to: FSF-France (http://www.fsffrance.org) for sponsoring this server!
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- PRATCHETT, TERRY (1948-).  Born in Buckinghamshire, England,
+:pratchett.freenode.net 372 Schr0bot :- Pratchett is the famous author of the Discworld series of
+:pratchett.freenode.net 372 Schr0bot :- novels and, more recently, an active Alzheimer's Disease awareness 
+:pratchett.freenode.net 372 Schr0bot :- campaigner.
+:pratchett.freenode.net 372 Schr0bot :- You're using freenode, a service of Peer-Directed Projects
+:pratchett.freenode.net 372 Schr0bot :- Center Ltd (http://freenode.net/pdpc.shtml).
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- By connecting to freenode you indicate that you have read
+:pratchett.freenode.net 372 Schr0bot :- and agree to adhere to our policies and procedures as per
+:pratchett.freenode.net 372 Schr0bot :- the website (http://freenode.net). We would like to remind
+:pratchett.freenode.net 372 Schr0bot :- you that unauthorized public logging of channels on the
+:pratchett.freenode.net 372 Schr0bot :- network is prohibited. Public channel logging should only
+:pratchett.freenode.net 372 Schr0bot :- take place where the channel owner(s) has requested this
+:pratchett.freenode.net 372 Schr0bot :- and users of the channel are all made aware (if you are
+:pratchett.freenode.net 372 Schr0bot :- publically logging your channel, you may wish to keep a
+:pratchett.freenode.net 372 Schr0bot :- notice in topic and perhaps as a on-join message).
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- freenode runs an open proxy scanner. Your use of the network
+:pratchett.freenode.net 372 Schr0bot :- indicates your acceptance of this policy. For details on
+:pratchett.freenode.net 372 Schr0bot :- freenode network policy, please take a look at our policy
+:pratchett.freenode.net 372 Schr0bot :- page (http://freenode.net/policy.shtml). Thank you for using
+:pratchett.freenode.net 372 Schr0bot :- the network!
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- Don't forget to check out these other Peer-Directed Projects:
+:pratchett.freenode.net 372 Schr0bot :- FOSSCON [http://www.fosscon.org] and fossevents 
+:pratchett.freenode.net 372 Schr0bot :- [http://www.fossevents.org], and soon we'll repeat last years 
+:pratchett.freenode.net 372 Schr0bot :- success with Picnics for Geeks across the globe, more info at 
+:pratchett.freenode.net 372 Schr0bot :- [http://geeknic.org]
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- freenode is a service of Peer-Directed Projects Center Ltd,
+:pratchett.freenode.net 372 Schr0bot :- a not for profit organisation registered in England and Wales.
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- Thank you for using freenode!
+:pratchett.freenode.net 372 Schr0bot :-  
+:pratchett.freenode.net 372 Schr0bot :- ***************************************************************
+:pratchett.freenode.net 372 Schr0bot :- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+:pratchett.freenode.net 372 Schr0bot :- ***************************************************************
+:pratchett.freenode.net 376 Schr0bot :End of /MOTD command.
+:Schr0bot MODE Schr0bot :+i
+:Schr0bot!~Schr0bot@pool-71-173-13-240.sctnpa.east.verizon.net JOIN #cyberia
+:pratchett.freenode.net 353 Schr0bot = #cyberia :Schr0bot schr0
+:pratchett.freenode.net 366 Schr0bot #cyberia :End of /NAMES list.
+:NickServ!NickServ@services. NOTICE Schr0bot :Schr0bot is not a registered nickname.
+:schr0!~schro@pool-71-173-13-240.sctnpa.east.verizon.net PRIVMSG #cyberia :!die
+[*]command received: die
