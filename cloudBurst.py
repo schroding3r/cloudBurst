@@ -3,10 +3,10 @@ import socket
 import sys
 import os
 
-OWNER = 'Schro'
-NETWORK = '67.58.179.252'
-PORT = 56667
-NICK = 'CloudBurst'
+OWNER = 'schr0'
+NETWORK = 'irc.freenode.net'
+PORT = 6667
+NICK = 'Schr0bot'
 TRIGGER = '!'
 ENCODING = 'utf-8' #Python3 modification, converts the strings to bytearrays before sending
 INITCHAN = '#cyberia'
