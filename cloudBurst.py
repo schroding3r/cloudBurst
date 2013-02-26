@@ -32,6 +32,7 @@ def command(sender,sendername,senderhost,sentto,arg):
         if arg in plugins:
                 execstage=plugdir+arg
                # log.write('Command Run:',end=' ') Weird bug needs looked into
+		log.write('Command Run:')
                 log.write(arg)
                 exec(compile(open(execstage).read(),execstage,'exec'))
         else:
